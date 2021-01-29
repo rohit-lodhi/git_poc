@@ -1,0 +1,60 @@
+1. Login to GitHub 'https://github.com/' and create new respository.
+
+2. Create a new local project in Public foldel.
+
+3. Open terminal.
+		rohit@rohit:~$ cd Public &&  mkdir git_poc
+		rohit@rohit:~/Public$ cd git_poc_project
+
+4. Now initialize the git by using “git init” on your terminal.
+		rohit@rohit:~/Public/git_poc$ git init
+
+5. Now add the remote url of repository that we created in setep 1.
+		rohit@rohit:~/Public/git_poc$ git remote add origin https://github.com/rohit-lodhi/git_poc.git
+
+6. To veirfy the remote url use 'git remote -v' :
+		rohit@rohit:~/Public/git_poc$ git remote -v
+
+7. Now add a 'README.md' file in your project folder.
+		rohit@rohit:~/Public/git_poc$ echo "# git_poc" >> README.md
+
+8. To track changes in your project folder use 'git status'.
+		rohit@rohit:~/Public/git_poc$ git status
+
+9. Newly added files will show in Untracked files.
+
+10. Now add newly added files from Untracked files.
+		rohit@rohit:~/Public/git_poc$ git add .
+
+11. Now add first commit to stage file changes.
+		rohit@rohit:~/Public/git_poc$ git commit -m "first commit"
+
+12. Push the staged commit from local to remote repository.
+		rohit@rohit:~/Public/git_poc$ git push -u origin master
+
+13. Create new branch and checkout to newly created branch
+		rohit@rohit:~/Public/git_poc$ git checkout -b staging
+
+14. To check current branch use 'git branch' it show the list of branches.
+		rohit@rohit:~/Public/git_poc$ git branch
+
+15. Now add/change local files/folder as you want in the new branch staging.
+
+16. Again to track changes in staging use 'git status' and to add those follow step 11 and 12.
+
+17. Push changes to newly created branch to remote respository.
+		rohit@rohit:~/Public/git_poc$ git push origin staging
+
+18. To switch between branches use 'git checkout branch_name'.
+		rohit@rohit:~/Public/git_poc$ git checkout master
+
+19. To merge changes of staging to master branch use 'git merge branch_name'.
+		rohit@rohit:~/Public/git_poc$ git merge staging
+
+20.	To push merge changes from local to remote repository use:
+		rohit@rohit:~/Public/git_poc$ git push origin master
+
+21. To track the diffrences between files/branches use 'git diff file_name/branch_name'
+
+22. To track the git changes use 'git log --pretty=oneline'
+		rohit@rohit:~/Public/git_poc$ git log --pretty=oneline
